@@ -158,10 +158,13 @@ button{font:inherit;color:inherit}
 
 .foot{text-align:center;padding:46px 0 10px}
 .foot .sig{font-style:italic;font-size:26px;color:var(--crimson);margin-top:8px}
+.credit{margin:28px auto 0;padding-top:14px;border-top:1px solid rgba(185,143,62,.35);font-family:var(--label);font-size:10px;letter-spacing:.08em;line-height:1.8;color:var(--ink-soft)}
+.credit a{color:var(--crimson);text-decoration-color:rgba(11,90,69,.4);text-underline-offset:3px}
+.credit a:hover{color:var(--gold)}
 canvas#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:60}
 @media (prefers-reduced-motion:reduce){*{animation:none!important}.book,.cv,.stage,#cover{transition-duration:.01s!important}}
 .qr{font-family:Amiri,"Noto Naskh Arabic","Traditional Arabic",serif;direction:rtl;color:var(--crimson);line-height:1.9}
-.bism{font-size:27px;margin-top:2px}.verse{font-size:21px;margin-top:6px}
+.bism{font-size:27px;margin-top:2px}.verse{font-size:21px;margin-top:18px}
 .tr{font-style:italic;font-size:16px;color:var(--ink-soft);margin:2px 0 4px}
 .name{font-size:48px}
 .dua-urdu{font-family:Amiri,serif!important;font-style:normal!important;color:var(--ink)!important;font-size:16px!important;line-height:1.6!important;margin-top:6px!important}
@@ -169,6 +172,9 @@ canvas#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-in
 .card-kicker{letter-spacing:2.5px;color:#f4dfaa!important;font-size:10px!important;margin-top:6px}
 .card h3{font-size:42px!important;letter-spacing:.5px;text-shadow:0 2px 12px rgba(0,0,0,.14)}
 .card .venue{font-size:17px;line-height:1.5;max-width:260px;margin-top:6px}
+#events{padding-left:0;padding-right:0}
+#events .card:first-child{margin-left:11%}
+#events .card:last-child{margin-right:11%}
 .scroll-float{position:fixed;z-index:40;right:14px;bottom:calc(18px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:7px;border:1px solid rgba(185,143,62,.7);border-radius:30px;padding:11px 13px;background:rgba(6,58,45,.94);color:#fff7e8;box-shadow:0 6px 22px rgba(6,58,45,.24);font:500 10px Jost,sans-serif;letter-spacing:1.5px;cursor:pointer;animation:bob 2s ease-in-out infinite}
 .scroll-float svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 @media(min-width:700px){.scroll-float{right:24px;bottom:24px}}
@@ -219,8 +225,8 @@ canvas#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-in
       
       <p class="tr tr-urdu" lang="ur" dir="rtl">اور اُس کی نشانیوں میں سے ہے کہ اُس نے تمہارے لیے تم ہی میں سے جوڑے پیدا کیے تاکہ تم اُن سے سکون حاصل کرو، اور تمہارے درمیان محبت اور رحمت رکھ دی۔</p>
       <div class="label">Surah Ar-Rum · 30:21</div>
-      <p class="small" style="margin:20px 0 4px">With the blessings of Allah, together with their families, we invite you to the wedding of</p>
-      <div class="name" id="b1">Adeela Qadeer</div>
+      <p class="small" style="margin:20px 0 4px">With the blessings of Allah, we invite you to the wedding of</p>
+      <div class="name" id="b1">Adeela Qadeer & Muzammil Saleem</div>
       <p class="req">Your presence and duas will be our greatest honour.</p>
       
     </div>
@@ -332,8 +338,9 @@ canvas#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-in
 
   <div class="foot">
     <svg class="orn" aria-hidden="true"><use href="#orn"/></svg>
-    <div class="label" style="margin-top:18px">With duas and blessings</div>
-    <div class="sig" id="sig">Adeela Qadeer</div><div class="qr" style="font-size:22px;margin-top:14px">بَارَكَ اللَّهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</div>
+    <div class="label" style="margin-top:18px">Seeking your prayers and blessings,</div>
+    <div class="sig" id="sig">Adeela Qadeer & Muzammil Saleem</div><div class="qr" style="font-size:22px;margin-top:14px">بَارَكَ اللَّهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</div>
+    <div class="credit">Designed &amp; Developed by Abdul Rehman<br>For Digital invitations & Creative Design Contact us +31 6 38879199 <br> Explore our Services at <a href="https://www.difusionseo.com" target="_blank" rel="noopener noreferrer">DifusionSEO</a></div>
   </div>
 </div>
 
@@ -375,7 +382,7 @@ $('#dow').textContent = CFG.main.dow; $('#dd').textContent = CFG.main.day; $('#d
 $('#dy').textContent = CFG.main.year; $('#dph').textContent = CFG.main.note;
 $('#seeyou').textContent = "See you, In sha Allah, on " + CFG.main.dow + ", " + CFG.main.day + " " + CFG.main.month + " " + CFG.main.year;
 $('#vn').textContent = CFG.venue; $('#va').textContent = CFG.address;
-$('#sig').textContent = NAMES;
+
 document.title = "Wedding Invitation \u00b7 " + NAMES;
 
 /* ===== cover ===== */
